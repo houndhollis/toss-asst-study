@@ -4,6 +4,9 @@ export const HeaderWrap = styled.div`
   position: relative;
 `;
 
+{
+  /* 헤더 탭 영역 CSS */
+}
 export const HeaderContainer = styled.header`
   position: absolute;
   top: 0;
@@ -51,4 +54,41 @@ export const HeaderContactBtn = styled.button`
   letter-spacing: -0.5px;
   background-color: white;
   cursor: pointer;
+`;
+
+{
+  /* 헤더 텍스트 CSS */
+}
+
+export const HeaderTextContainer = styled.div`
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+`;
+
+export const HeaderText = styled.h1`
+  font-size: 3.6vw;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 8px;
+  white-space: nowrap;
+`;
+
+export const ArrowIcon = styled.img`
+  margin-top: 82px;
+  width: 2vw;
+  height: auto;
+  animation: bounce 1.2s infinite ease-in-out;
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(16px);
+    }
+  }
 `;
