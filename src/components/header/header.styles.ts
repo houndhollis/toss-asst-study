@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 export const HeaderWrap = styled.div`
   position: relative;
+  margin-bottom: -5px;
 `;
 
 {
