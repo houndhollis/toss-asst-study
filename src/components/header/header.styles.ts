@@ -27,6 +27,10 @@ export const HeaderLogo = styled.a`
   cursor: pointer;
 `;
 
+export const HeaderHamburger = styled.img`
+  cursor: pointer;
+`;
+
 export const HeaderTabMenu = styled.div`
   display: flex;
   align-items: center;
@@ -63,7 +67,7 @@ export const HeaderContactBtn = styled.button`
 
 export const HeaderTextContainer = styled.div`
   position: absolute;
-  top: 25%;
+  top: 14vw;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -78,7 +82,7 @@ export const HeaderText = styled.h1`
 `;
 
 export const ArrowIcon = styled.img`
-  margin-top: 82px;
+  margin-top: 7vw;
   width: 2vw;
   height: auto;
   animation: bounce 1.2s infinite ease-in-out;
