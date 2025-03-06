@@ -4,6 +4,11 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
 `;
 
 export const GridItem = styled.div`
@@ -38,19 +43,40 @@ export const Title = styled.p<{ textAlign?: string; color?: string }>`
   span {
     display: block;
   }
+
+  @media (max-width: 640px) {
+    font-size: 8vw;
+    text-align: center;
+  }
 `;
 
 export const Description = styled.p<{ textAlign?: string; color?: string }>`
   font-size: 1.5vw;
   font-weight: 400;
-  color: gray;
+  color: #808298;
   margin: 20px 0;
   text-align: ${(props) => props.textAlign || "start"};
   color: ${(props) => props.color || "black"};
+
+  @media (max-width: 640px) {
+    font-size: 3vw;
+    text-align: center;
+    color: #808298;
+    margin-bottom: 6vw;
+    line-height: 4.5vw;
+  }
 `;
 
-export const BadgeTitle = styled.span`
+export const BadgeContainer = styled.div`
+  @media (max-width: 640px) {
+    display: flex;
+    justify-content: center;
+  }
+`;
+
+export const BadgeTitle = styled.div`
   position: relative;
+  display: inline;
 
   p {
     position: relative;
@@ -62,6 +88,13 @@ export const BadgeTitle = styled.span`
     color: black;
     z-index: 2;
   }
+
+  @media (max-width: 640px) {
+    text-align: center;
+    p {
+      font-size: 4vw;
+    }
+  }
 `;
 
 export const BadgeColor = styled.div<{ color?: string }>`
@@ -69,7 +102,7 @@ export const BadgeColor = styled.div<{ color?: string }>`
   top: 60%;
   left: -2px;
   right: -2px;
-  height: 5px;
+  height: 6px;
   background-color: ${(props) => props.color || "yellow"};
   z-index: 1;
 `;

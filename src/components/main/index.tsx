@@ -22,10 +22,12 @@ export default function Main() {
             <br />
             compelling visuals that do most of the marketing for you.
           </S.Description>
-          <S.BadgeTitle>
-            <p>LEARN MORE</p>
-            <S.BadgeColor />
-          </S.BadgeTitle>
+          <S.BadgeContainer>
+            <S.BadgeTitle>
+              <p>LEARN MORE</p>
+              <S.BadgeColor />
+            </S.BadgeTitle>
+          </S.BadgeContainer>
         </S.TextBox>
       </S.GridItem>
 
@@ -49,10 +51,12 @@ export default function Main() {
             <br />
             build and extend your brand in digital places.
           </S.Description>
-          <S.BadgeTitle>
-            <p>LEARN MORE</p>
-            <S.BadgeColor color="pink" />
-          </S.BadgeTitle>
+          <S.BadgeContainer>
+            <S.BadgeTitle>
+              <p>LEARN MORE</p>
+              <S.BadgeColor color="pink" />
+            </S.BadgeTitle>
+          </S.BadgeContainer>
         </S.TextBox>
       </S.GridItem>
 
