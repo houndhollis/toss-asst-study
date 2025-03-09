@@ -41,4 +41,4 @@ jobs:
 
       - name: Deploy to Railway
         run: |
-          railway up -- --docker --projectId ${{ secrets.RAILWAY_PROJECT_ID }}
+          railway redeploy --projectId ${{ secrets.RAILWAY_PROJECT_ID }}
