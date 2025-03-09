@@ -28,7 +28,8 @@ jobs:
           docker push ${{ secrets.DOCKER_USERNAME }}/toss-asst-study:v3
 
       - name: Print Railway Project ID (for debugging)
-        run: echo "Project ID: ${{ secrets.RAILWAY_PROJECT_ID }}"
+        run: |
+          echo "Project ID: ${{ secrets.RAILWAY_PROJECT_ID }}"
 
       - name: Deploy to Railway using API
         run: |
