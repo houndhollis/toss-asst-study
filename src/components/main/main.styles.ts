@@ -104,5 +104,6 @@ export const BadgeColor = styled.div<{ color?: string }>`
   right: -2px;
   height: 6px;
   background-color: ${(props) => props.color || "yellow"};
+  border-radius: 5px;
   z-index: 1;
 `;
