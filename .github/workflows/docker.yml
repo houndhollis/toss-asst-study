@@ -33,7 +33,7 @@ jobs:
 
       - name: Deploy to Railway using API
         run: |
-          curl -X POST https://api.railway.app/v1/projects/${{ secrets.RAILWAY_PROJECT_ID }}/deployments \
+          curl -X POST https://api.railway.app/v1/projects/f766a34a-63e3-4619-b107-3de334bc2828/deployments \
           -H "Authorization: Bearer ${{ secrets.RAILWAY_API_KEY }}" \
           -H "Content-Type: application/json" \
           -d '{"message": "GitHub Actions deploy"}'
