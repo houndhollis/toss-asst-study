@@ -29,12 +29,12 @@ jobs:
 
       - name: Install Railway CLI
           run: |
-            curl -sSL https://railway.app/install.sh | bash  # Railway CLI 설치
+            curl -sSL https://railway.app/install.sh | bash  
 
       - name: Login to Railway
         run: |
-          railway login --token ${{ secrets.RAILWAY_API_TOKEN }}  # Railway API 토큰으로 로그인
+          railway login --token ${{ secrets.RAILWAY_API_TOKEN }} 
 
       - name: Deploy to Railway
         run: |
-          railway up --docker --projectId ${{ secrets.RAILWAY_PROJECT_ID }}  # Docker 이미지로 Railway에 배포
+          railway up --docker --projectId ${{ secrets.RAILWAY_PROJECT_ID }}  
