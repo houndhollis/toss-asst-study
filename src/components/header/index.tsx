@@ -37,7 +37,7 @@ export default function Header() {
                 <S.HeaderListItem key={text}>{text}</S.HeaderListItem>
               ))}
             </S.HeaderList>
-            <S.HeaderContactBtn role="button">CONTACT</S.HeaderContactBtn>
+            <S.HeaderContactBtn role="button">CONTAC</S.HeaderContactBtn>
           </S.HeaderTabMenu>
         )}
       </S.HeaderContainer>
