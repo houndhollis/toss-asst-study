@@ -17,4 +17,7 @@ export default defineConfig({
   server: {
     allowedHosts: ["toss-asst-study-production.up.railway.app"],
   },
+  preview: {
+    allowedHosts: ["toss-asst-study-production.up.railway.app"],
+  },
 });
