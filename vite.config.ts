@@ -14,4 +14,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  server: {
+    allowedHosts: ["toss-asst-study-production.up.railway.app"],
+  },
 });
