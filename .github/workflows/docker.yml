@@ -33,7 +33,7 @@ jobs:
 
       - name: Login to Railway
         run: |
-          echo ${{ secrets.RAILWAY_API_KEY }} | railway login --apiKey
+          echo ${{ secrets.RAILWAY_API_KEY }} > $HOME/.railway/api_token
 
       - name: Deploy to Railway
         run: |
