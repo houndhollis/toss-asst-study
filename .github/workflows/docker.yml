@@ -27,13 +27,14 @@ jobs:
           docker build -t ${{ secrets.DOCKER_USERNAME }}/toss-asst-study:v3 .
           docker push ${{ secrets.DOCKER_USERNAME }}/toss-asst-study:v3
 
-      - name: Print Railway Project ID (for debugging)
+      - name: Install Railway CLI
         run: |
-          echo "Project ID: ${{ secrets.RAILWAY_PROJECT_ID }}"
+          curl -sSL https://railway.app/install.sh | bash
 
-      - name: Deploy to Railway using API
+      - name: Login to Railway
         run: |
-          curl -X POST https://api.railway.app/v1/projects/f766a34a-63e3-4619-b107-3de334bc2828/deployments \
-          -H "Authorization: Bearer ${{ secrets.RAILWAY_API_KEY }}" \
-          -H "Content-Type: application/json" \
-          -d '{"message": "GitHub Actions deploy"}'
+          echo ${{ secrets.RAILWAY_API_KEY }} | railway login --apiKey
+
+      - name: Deploy to Railway
+        run: |
+          railway up --docker --projectId ${{ secrets.RAILWAY_PROJECT_ID }}
