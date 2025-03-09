@@ -59,7 +59,6 @@ export const HeaderContactBtn = styled.button`
   letter-spacing: -0.5px;
   background-color: white;
   cursor: pointer;
-  background-color: red;
 `;
 
 {
