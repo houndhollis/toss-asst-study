@@ -31,14 +31,14 @@ jobs:
         run: |
           curl -sSL https://railway.app/install.sh | bash
 
-      - name: Create .railway directory
-        run: |
-          mkdir -p $HOME/.railway
-
       - name: Login to Railway
         run: |
           echo ${{ secrets.RAILWAY_API_KEY }} > $HOME/.railway/api_token
 
-      - name: Deploy to Railway
+      - name: Link Railway Project
         run: |
-          railway redeploy --projectId ${{ secrets.RAILWAY_PROJECT_ID }}
+          railway link --project ${{ secrets.RAILWAY_PROJECT_ID }}
+
+      - name: Redeploy Railway Project
+        run: |
+          railway redeploy
