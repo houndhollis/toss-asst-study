@@ -31,9 +31,11 @@ jobs:
         run: |
           curl -sSL https://railway.app/install.sh | bash
 
-      - name: Login to Railway (Set API Token)
+      - name: Login to Railway
+        env:
+          RAILWAY_API_TOKEN: ${{ secrets.RAILWAY_API_KEY }}
         run: |
-          export RAILWAY_API_TOKEN=${{ secrets.RAILWAY_API_KEY }}
+          eval $(railway login --browserless)
 
       - name: Link Railway Project
         run: |
